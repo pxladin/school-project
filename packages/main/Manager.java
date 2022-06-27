@@ -17,7 +17,6 @@ public class Manager {
       new Command("help", "Zeigt alle verfügbaren Befehle an"),
       new Command("clear", "Cleared die Konsole"),
       new Command("inv", "Enthält Befehle zur Manipulation deiner Spiele"),
-      new Command("me", "Zeigt Informationen über deinen Account an"),
   };
 
   public static void main(String[] args) {
@@ -50,9 +49,6 @@ public class Manager {
           break;
         case "inv":
           inv(realArguments);
-          break;
-        case "me":
-          me();
           break;
         default:
           Util.println("Befehl nicht gefunden.");
@@ -101,10 +97,6 @@ public class Manager {
     } else {
       Util.println("Unterbefehl nicht gefunden.");
     }
-  }
-
-  public static void me() {
-    Util.println(account.getUsername());
   }
 
   public static void help() {

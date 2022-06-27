@@ -1,6 +1,5 @@
 package util;
 
-import java.util.Scanner;
 import java.util.function.Predicate;
 
 public abstract class Util {
