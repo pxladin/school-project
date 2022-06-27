@@ -3,11 +3,12 @@ package entity;
 public class Game {
   private byte fsk;
   private double price;
-  private double size;
-  private short realeaseYear;
   private String genre;
   private String title;
-  private String version;
+
+  public String toString() {
+    return String.format("Titel: %s\nGenre: %s\nFSK: %s\nPreis: %s", title, genre, fsk, price);
+  }
 
   public double getPrice() {
     return price;
@@ -15,22 +16,6 @@ public class Game {
 
   public void setPrice(double price) {
     this.price = price;
-  }
-
-  public double getSize() {
-    return size;
-  }
-
-  public void setSize(double size) {
-    this.size = size;
-  }
-
-  public int getReleaseYear() {
-    return realeaseYear;
-  }
-
-  public void setReleaseYear(short releaseYear) {
-    this.realeaseYear = releaseYear;
   }
 
   public byte getFsk() {
@@ -56,13 +41,4 @@ public class Game {
   public void setTitle(String title) {
     this.title = title;
   }
-
-  public String getVersion() {
-    return version;
-  }
-
-  public void setVersion(String version) {
-    this.version = version;
-  }
-
 }

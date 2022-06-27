@@ -12,8 +12,7 @@ public class AccountBuilder {
 
   public static Account create() {
     AccountBuilder builder = new AccountBuilder()
-        .username(Util.ask("Username: ", validator.Account.username))
-        .password(Util.ask("Passwort: ", validator.Account.password));
+        .username(Util.ask("Username: ", validator.Account.username));
 
     return builder.build();
   }
@@ -24,18 +23,6 @@ public class AccountBuilder {
 
   public AccountBuilder username(String name) {
     this.account.setUsername(name);
-
-    return this;
-  }
-
-  public AccountBuilder password(String password) {
-    this.account.setPassword(password);
-
-    return this;
-  }
-
-  public AccountBuilder bio(String bio) {
-    this.account.setBio(bio);
 
     return this;
   }
